@@ -1,6 +1,6 @@
 
 Form{
-    width: 60%!important;
+    width: 70%!important;
     transition: all 0.3s ease-in;
     
     
@@ -16,6 +16,14 @@ Form{
 @media(994px<width<2560px){
     Form{
         width: 50%!important;
+        
+    }
+}
+
+
+@media(990px<width<1320px){
+    Form{
+        width: 30%!important;
         
     }
 }

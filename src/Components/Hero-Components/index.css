@@ -1,0 +1,10 @@
+.flex-container{
+display: flex;
+flex-direction: row;
+flex-wrap:wrap;
+gap: 6px;
+}
+
+.items{
+    flex: 1 0 8rem;
+}

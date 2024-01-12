@@ -1,23 +1,22 @@
-import { Card, Col, Container, Row } from "react-bootstrap";
+import { Card, Col, Container, Image, Row } from "react-bootstrap";
 import { RxTimer } from "react-icons/rx";
 import ColouredLine from "../../Utilities/ColouredLine";
 import { CiStreamOn } from "react-icons/ci";
 import { PiMediumLogoFill } from "react-icons/pi";
 import { AiTwotoneSafetyCertificate } from "react-icons/ai";
 import { MdAccessTime } from "react-icons/md";
-import WebDesign from "../../Utilities/Web-Design";
-import Aos from "aos";
-import 'aos/dist/aos.css'
-import { useEffect } from "react";
+import WebDesign from "../../Utilities/Web-Design-Name";
+import { motion } from "framer-motion";
+import Mentor from '../../assets/Images/mentor-1.jpg'
 
 const Default = () => {
-  useEffect(()=>{
-    Aos.init({duration: 900})
-  })
   return (
-    <div className=" "  >
+    <motion.div
+      className=" "
+      initial={{ x: -800, opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+    >
       <Container className="Content ">
-
         {/* Course Name */}
 
         <Row>
@@ -33,198 +32,252 @@ const Default = () => {
           <Col md={12} lg={6} xs={12}>
             <div className="wrapper">
               <div className="details">
-                <div>
-                  <p>About This Course</p>
-                  <p style={{ fontSize: "15px" }}>
-                    Laravel 10 - Create a Dynamic News Portal / News Paper and
-                    Magazine Website with Modern Features and Advanced
-                    Techniques
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                >
+                  <p className="Sub-heading">
+                    About This{" "}
+                    <span
+                      style={{
+                        backgroundColor: "#C90014",
+                        paddingInline: "10px",
+                        paddingBottom: "3px",
+                      }}
+                    >
+                      Course
+                    </span>{" "}
                   </p>
-                </div>
+                  <p className="content-font ">
+                    Master WordPress web design effortlessly with our
+                    beginner-friendly course. Learn hands-on skills for creating
+                    responsive, customized websites, and delve into SEO and
+                    e-commerce. Build a standout portfolio and unleash your
+                    creativity in the world of web design.
+                  </p>
+                </motion.div>
               </div>
               <ColouredLine />
-              <div className="quatification" data-aos="fade-left">
-                <p>Entry Requirements</p>
+              <div className="quatification">
+                <Row>
+                  <Col xs={12}>
+                    <p className="Sub-heading">
+                      Entry{" "}
+                      <span
+                        style={{
+                          backgroundColor: "#C90014",
+                          paddingInline: "10px",
+                          paddingBottom: "3px",
+                        }}
+                      >
+                        Requirements
+                      </span>{" "}
+                    </p>
+                  </Col>
+                  <Col>
+                    <p className="content-font">Basic Computer Knowledge</p>
+                  </Col>
+                </Row>
               </div>
 
               <ColouredLine />
               <div className="schedule">
-                <p>Time Schedule</p>
+                <Row>
+                  <Col xs={12}>
+                    <p className="Sub-heading">
+                      Time{" "}
+                      <span
+                        style={{
+                          backgroundColor: "#C90014",
+                          paddingInline: "10px",
+                          paddingBottom: "3px",
+                        }}
+                      >
+                        Schedule
+                      </span>
+                    </p>
+                  </Col>
+                  <Col>
+                    <p className="content-font">Monday 7 PM to 9 30 PM</p>
+                    <p className="content-font">Wednesday 7 PM to 9 30 PM</p>
+                  </Col>
+                </Row>
               </div>
               <ColouredLine />
               <div className="Instructor-panel">
-                <p>Instructor Panele</p>
+                <Row>
+                  <Col xs={12} md={12}>
+                    <p className="Sub-heading">
+                      Instructor{" "}
+                      <span
+                        style={{
+                          backgroundColor: "#C90014",
+                          paddingInline: "10px",
+                          paddingBottom: "3px",
+                        }}
+                      >
+                        Panel
+                      </span>{" "}
+                    </p>
+                  </Col>
+
+                  <Col md={5} xs={12} className="mentor-container  d-md-block d-sm-flex  justify-content-sm-center ">
+                    <Image src={Mentor} thumbnail className="mentor"/>
+                    <div className="instructor-bg-1"></div>
+                    <div className="instructor-bg-2"></div>
+                  </Col>
+                  <Col md={7} xs={12}>
+                  <div className="content-font">Hi! My name is Mohamed Imdhiyas, <br/><span style={{color:"#c90014",fontWeight:"700"}}>Iam your Mentor</span></div>
+                  </Col>
+                </Row>
               </div>
               <ColouredLine />
-              <div className="Audience">
-                <p>Target Audience</p>
+              <div className="">
+                <Row>
+                  <Col xs={12}>
+                    <p className="Sub-heading">Target Audience</p>
+                  </Col>
+                  <Col md={6} xs={12}>
+                    <div className="audience">Job Seekers</div>
+                  </Col>
+
+                  <Col md={6} xs={12}>
+                    {" "}
+                    <div className="audience">Job Seekers</div>
+                  </Col>
+                  <Col md={6} xs={12}>
+                    {" "}
+                    <div className="audience">
+                      Freelancers or Part time Job Seekers
+                    </div>
+                  </Col>
+                  <Col md={6} xs={12}>
+                    {" "}
+                    <div className="audience">Undergraduates</div>
+                  </Col>
+                  <Col md={6} xs={12}>
+                    {" "}
+                    <div className="audience">IT Students</div>
+                  </Col>
+                  <Col md={6} xs={12}>
+                    {" "}
+                    <div className="audience">Undergraduates</div>
+                  </Col>
+                  <Col md={6} xs={12}>
+                    {" "}
+                    <div className="audience">After O/L and A/L</div>
+                  </Col>
+                  <Col md={6} xs={12}>
+                    {" "}
+                    <div className="audience">Business Peoples</div>
+                  </Col>
+                  <Col md={6} xs={12}>
+                    {" "}
+                    <div className="audience">
+                      Digitel Marketing Industry (Fresh/Current)
+                    </div>
+                  </Col>
+                  <Col md={6} xs={12}>
+                    {" "}
+                    <div className="audience">
+                      Software Development Industry
+                    </div>
+                  </Col>
+                </Row>
               </div>
             </div>
+            {/* <span style={{backgroundColor:"#C90014", paddingInline:"10px", paddingBottom:"3px"}}>Panel</span> */}
           </Col>
 
           <Col md={12} lg={6} xs={12}>
             <Container className="mt-3">
               <Row>
-                <Col  md={4} lg={6} xl={4} xs={6}>
-                  <Card
-                    className="gap-3 mb-4 "
-                    style={{
-                      backgroundColor: "transparent",
-                      border: "2px solid white",
-                    }}
-                    data-aos="flip-down"
-                  >
+                <Col md={6} lg={6} xl={6} xs={12}>
+                  <Card className="gap-3 mb-4 default-card ">
                     <Card.Body>
                       <div>
                         <RxTimer size={40} />
                       </div>
 
-                      <h1
-                        style={{ color: "rgb(204,73,30)", fontSize: "1em" }}
-                      >
-                        Time Duration
-                      </h1>
-                      <h3
-                        style={{
-                          color: "white",
-                          marginTop: "-10px",
-                          fontSize: "1em",
-                        }}
-                        
-                      >
-                        3 Months
-                      </h3>
+                      <p className="default-card-main-title">Time Duration</p>
+                      <p className="default-card-sub-title">3 Months</p>
                     </Card.Body>
                   </Card>
                 </Col>
 
-                <Col xs={6} md={4} lg={6} xl={4}>
-                  <Card
-                    className="gap-3 mb-4 "
-                    style={{
-                      backgroundColor: "transparent",
-                      border: "2px solid white",
-                    }}
-                    data-aos="flip-down"
-                  >
+                <Col md={6} lg={6} xl={6} xs={12}>
+                  <Card className="gap-3 mb-4  default-card">
                     <Card.Body>
                       <div>
                         <PiMediumLogoFill size={40} />
                       </div>
 
-                      <h1
-                        style={{ color: "rgb(204,73,30)", fontSize: "1.2em" }}
-                      >
-                        Medium
-                      </h1>
-                      <h3
-                        style={{
-                          color: "white",
-                          marginTop: "-10px",
-                          fontSize: "1em",
-                        }}
-                      >
-                        Tamil{" "}
-                      </h3>
+                      <p className="default-card-main-title">Medium</p>
+                      <p className="default-card-sub-title">Tamil </p>
                     </Card.Body>
                   </Card>
                 </Col>
 
-                <Col xs={6} md={4} lg={6} xl={4}>
-                  <Card
-                    className="gap-3 mb-4 "
-                    style={{
-                      backgroundColor: "transparent",
-                      border: "2px solid white",
-                    }}
-                    data-aos="flip-down"
-                  >
+                <Col md={6} lg={6} xl={6} xs={12}>
+                  <Card className="gap-3 mb-4 default-card ">
                     <Card.Body>
                       <div>
                         <CiStreamOn size={40} />
                       </div>
 
-                      <h1
-                        style={{ color: "rgb(204,73,30)", fontSize: "1.2em" }}
-                      >
-                        Stream On
-                      </h1>
-                      <h3
-                        style={{
-                          color: "white",
-                          marginTop: "-10px",
-                          fontSize: "1em",
-                        }}
-                      >
-                        Zoom{" "}
-                      </h3>
+                      <p className="default-card-main-title">Stream On</p>
+                      <p className="default-card-sub-title">Zoom </p>
                     </Card.Body>
                   </Card>
                 </Col>
 
-                
-
-                <Col xs={6} md={4} lg={6} xl={4}>
-                  <Card
-                    className="gap-3 mb-4 "
-                    style={{
-                      backgroundColor: "transparent",
-                      border: "2px solid white",
-                    }}
-                    data-aos="flip-down"
-                  >
+                <Col md={6} lg={6} xl={6} xs={12}>
+                  <Card className="gap-3 mb-4 default-card ">
                     <Card.Body>
                       <div>
                         <MdAccessTime size={40} />
                       </div>
 
-                      <h1
-                        className="display-2"
-                        style={{ color: "rgb(204,73,30)", fontSize: "1.2em" }}
-                      >
-                        Total Hours
-                      </h1>
-                      <h3
-                        style={{
-                          color: "white",
-                          marginTop: "-10px",
-                          fontSize: "1em",
-                        }}
-                      >
-                        300 Hrs{" "}
-                      </h3>
+                      <p className="default-card-main-title">Total Hours</p>
+                      <p className="default-card-sub-title">300 Hrs </p>
                     </Card.Body>
                   </Card>
                 </Col>
-                <Col xs={12} md={4} lg={6} xl={4}>
-                  <Card
-                    className="gap-3 mb-4 "
-                    style={{
-                      backgroundColor: "transparent",
-                      border: "2px solid white",
-                    }}
-                    data-aos="flip-down"
-                  >
+                <Col md={6} lg={6} xl={6} xs={12}>
+                  <Card className="gap-3 mb-4 default-card ">
                     <Card.Body>
                       <div>
                         <AiTwotoneSafetyCertificate size={40} />
                       </div>
 
-                      <h1
-                        className="display-2"
-                        style={{ color: "rgb(204,73,30)", fontSize: "1.2em" }}
-                      >
+                      <p className="default-card-main-title">
                         Certificate Type
-                      </h1>
-                      <h3
-                        style={{
-                          color: "white",
-                          marginTop: "-10px",
-                          fontSize: "1em",
-                        }}
-                      >
-                        Diploma{" "}
-                      </h3>
+                      </p>
+                      <p className="default-card-sub-title">Diploma </p>
+                    </Card.Body>
+                  </Card>
+                </Col>
+              </Row>
+              <Row>
+                <Col md={12} lg={12} xl={12} xs={12}>
+                  <Card className="gap-3 mb-4 default-card-extended ">
+                    <Card.Body>
+                      <div>
+                        <AiTwotoneSafetyCertificate size={40} />
+                      </div>
+
+                      <p className="default-card-extended-main-title text-capitalize ">
+                        Learning Tools & Materials Given
+                      </p>
+                      <p className="default-card-extended-sub-title text-capitalize">
+                        Free Domain{" "}
+                      </p>
+                      <p className="default-card-extended-sub-title text-capitalize">
+                        Free Hosting{" "}
+                      </p>
+                      <p className="default-card-extended-sub-title text-capitalize">
+                        Canva Pro Account{" "}
+                      </p>
                     </Card.Body>
                   </Card>
                 </Col>
@@ -233,7 +286,7 @@ const Default = () => {
           </Col>
         </Row>
       </Container>
-    </div>
+    </motion.div>
   );
 };
 
